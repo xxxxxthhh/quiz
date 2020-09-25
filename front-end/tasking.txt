@@ -1,0 +1,23 @@
+task1: 商城页面
+sub-1：完成展示商品组件的html
+sub-2：链接数据库，在数据库中添加商品表（test）
+sub-3：读取数据库信息，并通过访问url显示
+sub-4：前端通过api获取数据库数据
+
+task2: 商品添加页面
+sub-1：前端创建html表单
+sub-2：后端创建添加商品的api
+sub-3：前端提交，后端转换为dto
+sub-4：数据库存储
+
+task3: 订单页面
+sub-1：添加订单页html
+sub-2：数据库添加订单表
+sub-3：创建订单组件及数据库访问接口
+sub-4：前端通过请求映射获取数据并演示
+
+task-4：删除订单
+sub-1：创建button，绑定onClick
+sub-2：click发送post请求删除
+sub-3：后端创建删除api
+sub-4：接受请求，删除订单信息
