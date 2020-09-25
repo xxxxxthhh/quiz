@@ -44,4 +44,8 @@ public class OrderService {
   public void addOrder(OrderEntity orderEntity) {
     orderRepository.save(orderEntity);
   }
+  @Transactional
+  public List<OrderEntity> getOrders() {
+    return orderRepository.findAll();
+  }
 }
