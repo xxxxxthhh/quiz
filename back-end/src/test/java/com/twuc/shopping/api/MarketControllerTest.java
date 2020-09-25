@@ -34,7 +34,7 @@ class MarketControllerTest {
   }
 
   @Test
-  void addItem() throws Exception {
+  void add_item_to_sql() throws Exception {
     ItemEntity itemEntity = ItemEntity.builder()
         .itemName("milk")
         .price(5)
@@ -49,5 +49,36 @@ class MarketControllerTest {
         .andExpect(status().isCreated());
 
     mockMvc.perform(get("/market")).andExpect(jsonPath("$", hasSize(1)));
+  }
+
+  @Test
+  void get_all_item_from_sql() throws Exception {
+    ItemEntity itemEntity = ItemEntity.builder()
+        .itemName("milk")
+        .price(5)
+        .measureUnit("bottle")
+        .imageUrl("imageUrl")
+        .build();
+
+    ObjectMapper objectMapper = new ObjectMapper();
+    String jsonValue = objectMapper.writeValueAsString(itemEntity);
+
+    mockMvc.perform(post("/market/item").contentType(MediaType.APPLICATION_JSON).content(jsonValue))
+        .andExpect(status().isCreated());
+
+    ItemEntity itemEntity2 = ItemEntity.builder()
+        .itemName("cola")
+        .price(4)
+        .measureUnit("bottle")
+        .imageUrl("imageUrl")
+        .build();
+
+    ObjectMapper objectMapper2 = new ObjectMapper();
+    String jsonValue2 = objectMapper2.writeValueAsString(itemEntity2);
+
+    mockMvc.perform(post("/market/item").contentType(MediaType.APPLICATION_JSON).content(jsonValue2))
+        .andExpect(status().isCreated());
+
+    mockMvc.perform(get("/market")).andExpect(jsonPath("$", hasSize(2)));
   }
 }
