@@ -10,11 +10,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Data
-@Table(name = "order")
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "order")
 @Builder
 
 public class OrderEntity {

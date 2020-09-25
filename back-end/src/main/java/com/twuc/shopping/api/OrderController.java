@@ -15,10 +15,11 @@ public class OrderController {
   @Autowired
   OrderService orderService;
 
-  @GetMapping("/order")
-  public ResponseEntity<List<OrderEntity>> getOrders() {
+  @GetMapping("/orders")
+  @CrossOrigin
+  public ResponseEntity getOrders() {
     List<OrderEntity> orderEntities = orderService.getOrders();
-    return ResponseEntity.status(HttpStatus.CREATED).body(orderEntities);
+    return ResponseEntity.status(HttpStatus.OK).body(orderEntities);
   }
 
   @PostMapping("/orderDelete")
@@ -33,7 +34,7 @@ public class OrderController {
     return ResponseEntity.status(HttpStatus.CREATED).build();
   }
 
-  @PostMapping("/order")
+  @PostMapping("/addOrder")
   public ResponseEntity addOrder(@RequestBody OrderEntity orderEntity) {
     orderService.addOrder(orderEntity);
     return ResponseEntity.status(HttpStatus.CREATED).build();
