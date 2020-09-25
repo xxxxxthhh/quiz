@@ -13,8 +13,8 @@ import javax.persistence.Table;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Table(name = "item")
+@Builder
 public class ItemEntity {
   @Id
   @GeneratedValue
@@ -24,3 +24,4 @@ public class ItemEntity {
   private String measureUnit;
   private String imageUrl;
 }
+
