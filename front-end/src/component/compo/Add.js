@@ -26,6 +26,7 @@ class Add extends React.Component {
         'content-type': 'application/json'
       }}
     fetch("http://localhost:8080/market/item", header);
+    window.location.reload();
   }
 
   hasValue = () => {
