@@ -15,7 +15,7 @@ class Order extends React.Component {
   }
 
   deleteOrderItem = (event) => {
-    fetch(`http://localhost:8080/orderDelete/${event.target.item_id}`, {method: "POST"});
+    fetch(`http://localhost:8080/orderDelete/${event.target}`, {method: "POST"});
   }
 
   render() {
