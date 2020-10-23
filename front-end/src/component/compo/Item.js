@@ -31,7 +31,7 @@ class Item extends React.Component {
 
   render() {
     return <div className="item">
-      <img src={image} width="300px" height="350px" alt={"pic"}/><br/>
+      <img src= {this.props.item.image} width="300px" height="350px" alt={'加载失败，请重试'}/><br/>
       <span>{this.props.item.name}</span><br/>
       <span>单价:{this.props.item.price}元/{this.props.item.measurement}</span>
       <a href="#" onClick={this.addToOrder}>

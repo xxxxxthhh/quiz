@@ -26,7 +26,6 @@ class Add extends React.Component {
         'content-type': 'application/json'
       }}
     fetch("http://localhost:8080/market/item", header);
-
   }
 
   render() {
@@ -34,14 +33,14 @@ class Add extends React.Component {
       <form>
         <h1>添加商品</h1>
         <label>名称：</label><br/>
-        <input name="name" onChange={(event)=>this.setState({name: event.target.value})}/><br/>
+        <input name="name" onChange={(event)=>this.setState({name: event.target.value})} required={true}/><br/>
         <label>价格：</label><br/>
-        <input name="price" onChange={(event)=>this.setState({price: event.target.value})}/><br/>
+        <input name="price" onChange={(event)=>this.setState({price: event.target.value})} required={true}/><br/>
         <label>单位：</label><br/>
-        <input name="measurement" onChange={(event)=>this.setState({measurement: event.target.value})}/><br/>
+        <input name="measurement" onChange={(event)=>this.setState({measurement: event.target.value})} required = {true}/><br/>
         <label>图片：</label><br/>
-        <input name="image" onChange={(event)=>this.setState({image: event.target.value})}/><br/>
-        <button type="button" class="btn btn-primary" onClick={this.handleSubmit}>提交</button>
+        <input name="image" onChange={(event)=>this.setState({image: event.target.value})} required = {true}/><br/>
+        <button type="button" class="btn btn-primary" onClick={this.handleSubmit} >提交</button>
       </form>
     </div>
   }
