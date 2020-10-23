@@ -64,8 +64,8 @@ public class OrderService {
       return itemEntities;
     }
     for(OrderDto order : orderList){
-      ItemEntity itemDto = itemRepository.findById(order.getItemId()).orElse(null);
-      itemEntities.add(itemDto);
+      ItemEntity itemEntity = itemRepository.findById(order.getItemId()).orElse(null);
+      itemEntities.add(itemEntity);
     }
     return itemEntities;
   }
