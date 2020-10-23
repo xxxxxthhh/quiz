@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Data
@@ -19,9 +21,14 @@ public class ItemEntity {
   @Id
   @GeneratedValue
   private int id;
-  private String itemName;
+  @NotNull(message = "产品名称不能为空")
+  private String name;
+  @NotNull(message = "产品价格不能为空")
+  @DecimalMin("0")
   private double price;
-  private String measureUnit;
-  private String imageUrl;
+  @NotNull(message = "产品单位不能为空")
+  private String measurement;
+  @NotNull(message = "产品图片不能为空")
+  private String image;
 }
 

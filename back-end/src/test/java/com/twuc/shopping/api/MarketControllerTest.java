@@ -1,6 +1,5 @@
 package com.twuc.shopping.api;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.twuc.shopping.entity.ItemEntity;
 import com.twuc.shopping.repository.ItemRepository;
@@ -13,7 +12,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.hasSize;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -36,10 +34,10 @@ class MarketControllerTest {
   @Test
   void add_item_to_sql() throws Exception {
     ItemEntity itemEntity = ItemEntity.builder()
-        .itemName("milk")
+        .name("milk")
         .price(5)
-        .measureUnit("bottle")
-        .imageUrl("imageUrl")
+        .measurement("bottle")
+        .image("image")
         .build();
 
     ObjectMapper objectMapper = new ObjectMapper();
@@ -54,10 +52,10 @@ class MarketControllerTest {
   @Test
   void get_all_item_from_sql() throws Exception {
     ItemEntity itemEntity = ItemEntity.builder()
-        .itemName("milk")
+        .name("milk")
         .price(5)
-        .measureUnit("bottle")
-        .imageUrl("imageUrl")
+        .measurement("bottle")
+        .image("image")
         .build();
 
     ObjectMapper objectMapper = new ObjectMapper();
@@ -67,10 +65,10 @@ class MarketControllerTest {
         .andExpect(status().isCreated());
 
     ItemEntity itemEntity2 = ItemEntity.builder()
-        .itemName("cola")
+        .name("cola")
         .price(4)
-        .measureUnit("bottle")
-        .imageUrl("imageUrl")
+        .measurement("bottle")
+        .image("image")
         .build();
 
     ObjectMapper objectMapper2 = new ObjectMapper();

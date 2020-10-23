@@ -4,11 +4,10 @@ import com.twuc.shopping.entity.ItemEntity;
 import com.twuc.shopping.repository.ItemRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -21,7 +20,8 @@ public class MarketController {
   }
 
   @PostMapping("/market/item")
-  public ResponseEntity addItem(@RequestBody ItemEntity itemEntity){
+  @CrossOrigin
+  public ResponseEntity addItem(@RequestBody @Validated ItemEntity itemEntity){
     itemRepository.save(itemEntity);
     return ResponseEntity.status(HttpStatus.CREATED).build();
   }
