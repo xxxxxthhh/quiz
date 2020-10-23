@@ -39,7 +39,7 @@ class Add extends React.Component {
   render() {
     return <div className="create-item">
       <form>
-        <h1>添加商品</h1>
+        <h1>商品</h1>
         <label>名称：</label><br/>
         <input name="name" onChange={(event)=>this.setState({name: event.target.value})} required={true}/><br/>
         <label>价格：</label><br/>

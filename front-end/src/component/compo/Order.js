@@ -7,10 +7,11 @@ class Order extends React.Component {
     this.state = {
       items:[]
     }
-    fetch("http://localhost:8080/orders", {method: "GET"})
+    fetch("http://localhost:8080/ordersList", {method: "GET"})
       .then(res=>res.json())
       .then(data => this.setState({items:data}))
       .then(()=>console.log(this.state.items));
+    console.log(this.state.items);
   }
 
   deleteOrderItem = (event) => {
