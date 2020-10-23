@@ -1,5 +1,6 @@
 package com.twuc.shopping.api;
 
+import com.twuc.shopping.entity.ItemEntity;
 import com.twuc.shopping.entity.OrderEntity;
 import com.twuc.shopping.service.OrderService;
 import org.springframework.http.HttpStatus;
@@ -22,6 +23,13 @@ public class OrderController {
   public ResponseEntity getOrders() {
     List<OrderEntity> orderEntities = orderService.getOrders();
     return ResponseEntity.status(HttpStatus.OK).body(orderEntities);
+  }
+
+  @GetMapping("/orders")
+  @CrossOrigin
+  public ResponseEntity getOrderItems() {
+    List<ItemEntity> itemEntities = orderService.getItemEntitiesList();
+    return ResponseEntity.status(HttpStatus.OK).body(itemEntities);
   }
 
   @PostMapping("/orderDelete")
