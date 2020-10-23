@@ -28,6 +28,13 @@ class Add extends React.Component {
     fetch("http://localhost:8080/market/item", header);
   }
 
+  hasValue = () => {
+       if (!this.state.name||!this.state.price||!this.state.measurement||!this.state.image){
+         return true;
+       }
+       return false;
+  }
+
   render() {
     return <div className="create-item">
       <form>
@@ -40,7 +47,7 @@ class Add extends React.Component {
         <input name="measurement" onChange={(event)=>this.setState({measurement: event.target.value})} required = {true}/><br/>
         <label>图片：</label><br/>
         <input name="image" onChange={(event)=>this.setState({image: event.target.value})} required = {true}/><br/>
-        <button type="button" class="btn btn-primary" onClick={this.handleSubmit} >提交</button>
+        <button type="button" class="btn btn-primary" onClick={this.handleSubmit} disabled={this.hasValue()}>提交</button>
       </form>
     </div>
   }

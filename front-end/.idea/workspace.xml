@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d339aa-09a2-4133-8e11-37c074b49c7d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/api/MarketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/api/MarketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/api/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/api/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/entity/ItemEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/main/java/com/twuc/shopping/entity/ItemEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/api/MarketControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../back-end/src/test/java/com/twuc/shopping/api/MarketControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/compo/Add.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/compo/Add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/compo/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/compo/Item.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/compo/Add.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="42" column="94" lean-forward="true" selection-start-line="42" selection-start-column="94" selection-end-line="42" selection-end-column="94" />
+            <state relative-caret-position="529">
+              <caret line="49" column="118" lean-forward="true" selection-start-line="49" selection-start-column="118" selection-end-line="49" selection-end-column="118" />
             </state>
           </provider>
         </entry>
@@ -240,16 +236,15 @@
       <option name="presentableId" value="Default" />
       <updated>1601008929950</updated>
       <workItem from="1601008931600" duration="7485000" />
-      <workItem from="1603413766457" duration="4025000" />
+      <workItem from="1603413766457" duration="4948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11510000" />
+    <option name="totallyTimeSpent" value="12433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23931624" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -374,8 +369,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/component/compo/Add.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="42" column="94" lean-forward="true" selection-start-line="42" selection-start-column="94" selection-end-line="42" selection-end-column="94" />
+        <state relative-caret-position="529">
+          <caret line="49" column="118" lean-forward="true" selection-start-line="49" selection-start-column="118" selection-end-line="49" selection-end-column="118" />
         </state>
       </provider>
     </entry>
