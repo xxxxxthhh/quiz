@@ -8,5 +8,4 @@ import java.util.List;
 public interface ItemRepository extends CrudRepository<ItemEntity, Integer> {
   @Override
   List<ItemEntity> findAll();
-  List<ItemEntity> findById();
 }

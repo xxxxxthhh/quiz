@@ -25,7 +25,7 @@ public class OrderController {
     return ResponseEntity.status(HttpStatus.OK).body(orderEntities);
   }
 
-  @GetMapping("/orders")
+  @GetMapping("/ordersList")
   @CrossOrigin
   public ResponseEntity getOrderItems() {
     List<ItemEntity> itemEntities = orderService.getItemEntitiesList();
